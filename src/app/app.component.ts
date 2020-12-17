@@ -24,18 +24,4 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-
-  public appPages = [
-    {
-      title : "Liste des ventes",
-      url   : "./listing-v",
-      icon  : "basket-sharp"
-    },
-    {
-      title : "Liste des entreprises",
-      url   : "./listing-e",
-      icon  : "clipboard-sharp"
-    }
-  ]
-
 }
