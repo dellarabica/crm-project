@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Liste des ventes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addItem()">
+            <ion-icon c name="create-sharp"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-list>
+        <ion-item *ngFor="let item of data">
+            id : {{ item.id }} - date : {{ item.date }} - visits : {{ item.number_of_visits }}
+            <ion-fab-button mini color="secondary" (click)="moreinfo(item)" slot="end">
+                <ion-icon c name="create-outline"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button mini color="secondary" (click)="addvente(item)" slot="end">
+                <ion-icon c name="create-outline"></ion-icon>
+            </ion-fab-button>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,7 +1,7 @@
 {
   "name": "crm-project",
   "integrations": {
-    "capacitor": {}
+    "cordova": {}
   },
   "type": "angular"
 }
