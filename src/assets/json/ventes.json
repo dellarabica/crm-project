@@ -1,0 +1,23 @@
+[{
+        "person_id": 1,
+        "sale": [{
+                "product_id": 1,
+                "quantity": 1500
+            },
+            {
+                "product_id": 2,
+                "quantity": 200
+            }
+        ],
+        "total": 3266
+    },
+    {
+        "person_id": 2,
+        "tabsale": [{
+            "sale_id": 3,
+            "product_id": 2,
+            "quantity": 150
+        }],
+        "total": 199.5
+    }
+]

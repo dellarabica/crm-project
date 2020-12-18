@@ -77,4 +77,12 @@ export class ListingEPage implements OnInit {
           return await modal.present();
       }
 
+      doRefresh(event) {
+        console.log('Refreshing...');
+    
+        setTimeout(() => {
+          console.log('Impossible de rafraîchir');
+          event.target.complete();
+        }, 2000);
+      }
 }

@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'mod-addentreprise',
     loadChildren: () => import('./mod-addentreprise/mod-addentreprise.module').then( m => m.ModAddentreprisePageModule)
   },
+  {
+    path: 'listing-c',
+    loadChildren: () => import('./listing-c/listing-c.module').then( m => m.ListingCPageModule)
+  },
 
 ];
 

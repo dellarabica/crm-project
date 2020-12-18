@@ -33,6 +33,11 @@ export class AppComponent {
       title : "Liste des entreprises",
       url   : "./listing-e",
       icon  : "clipboard-sharp"
+    },
+    {
+      title : "Liste des contacts",
+      url   : "./listing-c",
+      icon  : "person-sharp"
     }
   ]
 }

@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>listing-c</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="type">
+        <ion-segment-button value="all">
+            <ion-label>Tous</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="customers">
+            <ion-label>Clients</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="sellers">
+            <ion-label>Vendeurs</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div id="container" [ngSwitch]="type">
+        <ion-list *ngSwitchCase="'all'">
+            <ion-item *ngFor="let item of all">
+                <ion-label> {{item.name}} </ion-label>
+            </ion-item>
+        </ion-list>
+        <!--Choix Clients -->
+        <ion-list *ngSwitchCase="'customers'">
+            <ion-item *ngFor="let item of tabcust">
+                <ion-label> {{item.name}} </ion-label>
+            </ion-item>
+        </ion-list>
+        <!--Choix Vendeurs-->
+        <ion-list *ngSwitchCase="'sellers'">
+            <ion-item *ngFor="let item of tabsellers">
+                <ion-label> {{item.name}} </ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

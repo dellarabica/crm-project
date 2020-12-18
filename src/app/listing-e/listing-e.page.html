@@ -5,12 +5,17 @@
 </ion-header>
 
 <ion-content>
+    <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="addClient()" title="Ajouter un client">
             <ion-icon c name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
 
+    <ion-searchbar (ionChange)="listenInput(inputSearch)" [(ngModel)]="inputSearch" placeholder="Rechercher"></ion-searchbar>
     <ion-list>
         <ion-item *ngFor="let item of data">
             {{item.nom}}
