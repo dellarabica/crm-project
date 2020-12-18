@@ -22,34 +22,34 @@
             <ion-label position="floating">Nom</ion-label>
             <ion-input formControlName="nom" type="text"></ion-input>
         </ion-item>
-        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.required">
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.required">
             Vous devez entrer le nom de famille du client.
-          </span>
-        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.minlength">
+        </p>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.minlength">
             Le nom doit faire au minimum 3 caractères.
-          </span>
+        </p>
 
         <ion-item lines="full">
             <ion-label position="floating">Email</ion-label>
             <ion-input formControlName="mail" type="email"></ion-input>
         </ion-item>
-        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mail.errors?.required">
-          L'email est requis.
-        </span>
-        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mail.errors?.pattern">
-          Veuillez entrer un mail valide.
-        </span>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.mail.errors?.required">
+            L'email est requis.
+        </p>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.mail.errors?.pattern">
+            Veuillez entrer un mail valide.
+        </p>
 
         <ion-item lines="full">
             <ion-label position="floating">Numéro de téléphone</ion-label>
             <ion-input maxlength="10" formControlName="telephone" type="text" required></ion-input>
         </ion-item>
-        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.telephone.errors?.required">
-          Le numéro de téléphone est requis.
-        </span>
-        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.telephone.errors?.pattern">
-          Vous ne pouvez entrer que des chiffres.
-        </span>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.telephone.errors?.required">
+            Le numéro de téléphone est requis.
+        </p>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.telephone.errors?.pattern">
+            Vous ne pouvez entrer que des chiffres.
+        </p>
 
         <ion-row>
             <ion-col>

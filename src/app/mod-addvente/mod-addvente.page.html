@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>mod-addvente</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Ajout d'une vente</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <form [formGroup]="addV" (ngSubmit)="submitForm()" novalidate>
 
+        <ion-item lines="full">
+            <ion-label position="floating">Produit</ion-label>
+            <ion-select formControlName="produit">
+                <ion-select-option *ngFor="let article of vente" value="{{article.nom}}">{{article.nom}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.prenom.errors?.required">
+            Vous devez choisir un produit.
+        </p>
+
+        <ion-item lines="full">
+            <ion-label position="floating">Quantité</ion-label>
+            <ion-input formControlName="qte" type="number"></ion-input>
+        </ion-item>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.required">
+            Vous devez entrer une quantité.
+        </p>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.min">
+            La quantité ne peut pas être nulle.
+        </p>
+
+        <ion-row>
+            <ion-col>
+                <ion-button type="submit" color="danger" expand="block">Ajouter</ion-button>
+            </ion-col>
+        </ion-row>
+    </form>
 </ion-content>

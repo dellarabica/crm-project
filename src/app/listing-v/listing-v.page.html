@@ -6,20 +6,24 @@
 
 <ion-content>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="addItem()">
-            <ion-icon c name="create-sharp"></ion-icon>
+        <ion-fab-button (click)="addClient()" title="Ajouter un client">
+            <ion-icon c name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
 
     <ion-list>
         <ion-item *ngFor="let item of data">
-            id : {{ item.id }} - date : {{ item.date }} - visits : {{ item.number_of_visits }}
-            <ion-fab-button mini color="secondary" (click)="moreinfo(item)" slot="end">
-                <ion-icon c name="create-outline"></ion-icon>
+            {{item.prenom}} {{item.nom}}
+            <ion-fab-button mini color="dark" title="Voir les informations du client" (click)="moreinfo(item)" slot="end">
+                <ion-icon c name="information-circle"></ion-icon>
             </ion-fab-button>
-            <ion-fab-button mini color="secondary" (click)="addvente(item)" slot="end">
-                <ion-icon c name="create-outline"></ion-icon>
+            <ion-fab-button mini color="success" title="Ajouter une vente" (click)="addVente(item)" slot="end">
+                <ion-icon c name="bag-add"></ion-icon>
             </ion-fab-button>
+            <!--
+                A faire : 
+                - Ajouter un menu déroulant contenant les ventes selon le client
+            -->
         </ion-item>
     </ion-list>
 </ion-content>

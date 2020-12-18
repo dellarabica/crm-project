@@ -1,0 +1,21 @@
+[{
+        "nom": "Bière sans alcool",
+        "prix": "5.99"
+    },
+    {
+        "nom": "Fromage de chèvre",
+        "prix": "2.49"
+    },
+    {
+        "nom": "Yaourts bio",
+        "prix": "2.30"
+    },
+    {
+        "nom": "Sauce tomate",
+        "prix": "1.89"
+    },
+    {
+        "nom": "Saucisses vegan",
+        "prix": "3.79"
+    }
+]

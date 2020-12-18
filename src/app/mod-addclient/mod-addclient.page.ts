@@ -11,8 +11,6 @@ export class ModAddclientPage implements OnInit {
 
   addCl: FormGroup
 
-  addTask = { "task": "", "name": "", "mail": "", "phone": "" };
-
   public isSubmitted: boolean = false;
 
 	constructor(public formBuilder: FormBuilder, public modalCtrl: ModalController) {}

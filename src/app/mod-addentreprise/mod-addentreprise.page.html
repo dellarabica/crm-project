@@ -1,9 +1,57 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>mod-addentreprise</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Ajout d'une entreprise</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <form [formGroup]="addCl" (ngSubmit)="submitForm()" novalidate>
 
+        <ion-item lines="full">
+            <ion-label position="floating">Nom</ion-label>
+            <ion-input formControlName="nom" type="text"></ion-input>
+        </ion-item>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.required">
+            Vous devez entrer le nom de l'entreprise.
+        </p>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.nom.errors?.minlength">
+            Le nom doit faire au minimum 2 caractères.
+        </p>
+
+        <ion-item lines="full">
+            <ion-label position="floating">Adresse</ion-label>
+            <ion-input formControlName="adresse" type="text"></ion-input>
+        </ion-item>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.adresse.errors?.required">
+            Vous devez entrer l'adresse de l'entreprise.
+        </p>
+
+        <ion-item lines="full">
+            <ion-label position="floating">Code postal</ion-label>
+            <ion-input maxlength="5" formControlName="cp" type="number"></ion-input>
+        </ion-item>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.cp.errors?.required">
+            Le code postal est requis.
+        </p>
+        <p class="error ion-padding" *ngIf="isSubmitted && (errorControl.cp.errors?.maxLength || errorControl.cp.errors?.minLength)">
+            Le code postal ne peut être composé que de 5 chiffres.
+        </p>
+
+        <ion-item lines="full">
+            <ion-label position="floating">Ville</ion-label>
+            <ion-input formControlName="ville" type="text" required></ion-input>
+        </ion-item>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.ville.errors?.required">
+            La ville est requise.
+        </p>
+        <p class="error ion-padding" *ngIf="isSubmitted && errorControl.ville.errors?.minLength">
+            Le nom de la ville doit faire au moins 1 caractère.
+        </p>
+
+        <ion-row>
+            <ion-col>
+                <ion-button type="submit" color="danger" expand="block">Ajouter</ion-button>
+            </ion-col>
+        </ion-row>
+    </form>
 </ion-content>

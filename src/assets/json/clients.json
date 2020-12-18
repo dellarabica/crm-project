@@ -1,0 +1,15 @@
+[{
+        "nom": "Brzęczyszczykiewicz",
+        "prenom": "Grzegorz",
+        "mail": "grze.gorz@aol.com",
+        "telephone": "0836656565",
+        "entreprise": "Arr Nak"
+    },
+    {
+        "nom": "Tuche",
+        "prenom": "Jeff",
+        "mail": "beaufdunord@free.fr",
+        "telephone": "0365498716",
+        "entreprise": "SFR"
+    }
+]

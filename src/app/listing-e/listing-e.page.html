@@ -1,9 +1,29 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Liste d'entreprises</ion-title>
+        <ion-title>Liste des entreprises</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addClient()" title="Ajouter un client">
+            <ion-icon c name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 
+    <ion-list>
+        <ion-item *ngFor="let item of data">
+            {{item.nom}}
+            <ion-fab-button mini color="dark" title="Voir les informations de l'entreprise" (click)="moreinfo(item)" slot="end">
+                <ion-icon c name="information-circle"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button mini color="success" title="Ajouter une vente" (click)="addVente(item)" slot="end">
+                <ion-icon c name="bag-add"></ion-icon>
+            </ion-fab-button>
+            <!--
+                A faire : 
+                - Ajouter un menu déroulant contenant les ventes selon l'entreprise
+            -->
+        </ion-item>
+    </ion-list>
 </ion-content>

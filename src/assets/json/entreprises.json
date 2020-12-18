@@ -1,0 +1,19 @@
+[{
+        "nom": "Arr Nak",
+        "adresse": "30 impasse des Pigeons",
+        "cp": "01320",
+        "ville": "Quelque part"
+    },
+    {
+        "nom": "Frôd Fisskal",
+        "adresse": "47 avenue des Banquiers",
+        "cp": "92300",
+        "ville": "Levallois-Perret"
+    },
+    {
+        "nom": "SFR",
+        "adresse": "16 rue du Général Alain de Boissieu",
+        "cp": "75015",
+        "ville": "Paris"
+    }
+]
